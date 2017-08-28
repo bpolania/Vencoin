@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-104915253-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+		<title>Vencoin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--Favicon-->
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.ico') }}" title="Favicon"/>
+		<link rel="stylesheet" href= "{{ url_for('static',filename='assets/css/main.css') }}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"><strong>Vencoin</strong></a>
+					<nav id="nav">
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>Welcome to Vencoin Index</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div>
+							<h2>Vencoin</h2>
+							<h3>$10</h3>
+							<p>Venezuelan Bolivares <br /> Stabilization Currency</p>
+						</div>
+
+						<div>
+							<h2>Top-P 500 Index</h2>
+							<h3>{{ capitalization }}</h3>
+							<p>Top 500 Coins Free-float Index</p>
+						</div>
+
+						<div>
+							<h2>Top-P Pareto Index</h2>
+							<h3>{{ proportional }}</h3>
+							<p>80% Capitalization Coins Free-float Index</p>
+						</div>
+
+					</div>
+
+					<footer>
+						<a href="#" class="button">Get Started</a>
+					</footer>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+							<div class="image round">
+								<img src= "{{ url_for('static',filename='images/pic01.png') }}" alt="Pic 01" />
+							</div>
+							<header>
+								<h3>Top-P 500 Index<br /></h3>
+							</header>
+							<p>Free-float index containing top 500 coins by market capitalization<br />and a divisor based on Bitcoin's total possible coins.</p>
+							<footer>
+								<a href="/topPlot" class="button">Learn More</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image round">
+								<img src="{{ url_for('static',filename='images/pic02.png') }}" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Top-P Pareto Index<br /></h3>
+							</header>
+							<p>Free-float index containing the coins that amount to 80% of the market<br /> and a divisor based on Bitcoin's total possible coins.</p>
+							<footer>
+								<a href="/paretoPlot" class="button">Learn More</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static',filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='assets/js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static',filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
